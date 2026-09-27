@@ -1,0 +1,195 @@
+/* =====================================================
+
+   TOP BAR
+
+===================================================== */
+
+.topbar {
+
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 10;
+
+  background: rgba(20, 20, 20, 0.85);
+
+  backdrop-filter: blur(10px);
+
+}
+
+
+/* =====================================================
+   NAVIGATION BUTTONS
+===================================================== */
+
+.navigation-buttons {
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+
+.navigation-buttons button {
+
+  width: 36px;
+
+  height: 36px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #111;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+}
+
+
+.navigation-buttons button:hover {
+
+  background: #282828;
+
+}
+
+
+/* =====================================================
+   TOPBAR RIGHT
+===================================================== */
+
+.topbar-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+}
+
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.bell-button {
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 5px 12px 5px 5px;
+
+  background: #111;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  color: white;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+}
+
+
+.profile:hover {
+
+  background: #282828;
+
+}
+
+
+.profile:focus-visible {
+
+  outline: 2px solid #1ed760;
+
+  outline-offset: 2px;
+
+}
+
+
+.profile-icon {
+
+  width: 30px;
+
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: #333;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .topbar {
+
+    padding: 0 15px;
+
+  }
+
+}

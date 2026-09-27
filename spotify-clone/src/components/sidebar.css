@@ -1,0 +1,214 @@
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+  width: 240px;
+  height: 100%;
+  background: #000;
+  padding: 24px 12px;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 12px;
+  margin-bottom: 5px;
+
+  color: #b3b3b3;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.nav-item:hover {
+  color: white;
+  background: #181818;
+}
+
+.nav-item.active {
+  color: white;
+  background: transparent;
+}
+
+
+/* =====================================================
+   SMALL ICON
+===================================================== */
+
+.small-icon {
+  width: 24px;
+  height: 24px;
+
+  background: #b3b3b3;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 2px;
+}
+
+.small-icon.liked {
+  background: linear-gradient(
+    135deg,
+    #7b61ff,
+    #c850c0
+  );
+
+  color: white;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+  height: 1px;
+  background: #282828;
+  margin: 20px 12px;
+}
+
+
+/* =====================================================
+   PLAYLIST LIST
+===================================================== */
+
+.playlists {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 12px;
+}
+
+.playlists p {
+  color: #b3b3b3;
+  font-size: 13px;
+  margin: 0 0 5px;
+}
+
+.playlists span {
+  color: #b3b3b3;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.playlists span:hover {
+  color: white;
+}
+
+
+/* =====================================================
+   PLAYLIST BUTTONS
+===================================================== */
+
+.playlists button,
+.playlist-link {
+  width: 100%;
+
+  border: none;
+  background: transparent;
+
+  color: #b3b3b3;
+
+  text-align: left;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.playlists button:hover,
+.playlist-link:hover {
+  color: white;
+}
+
+.empty-playlists {
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   SIDEBAR SCROLLBAR
+===================================================== */
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .logo span,
+  .nav-item span,
+  .playlists {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .nav-item {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,390 @@
+/* =====================================================
+   HOME
+===================================================== */
+
+.home {
+  padding: 10px 30px 150px;
+}
+
+.home h1 {
+  font-size: 30px;
+  margin: 10px 0 25px;
+}
+
+
+/* =====================================================
+   QUICK PLAYLISTS
+===================================================== */
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.quick-card {
+  height: 64px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  font-weight: bold;
+}
+
+.quick-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =====================================================
+   QUICK IMAGE
+===================================================== */
+
+.quick-image {
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =====================================================
+   QUICK CARD TEXT
+===================================================== */
+
+.quick-card span {
+  padding-left: 14px;
+  padding-right: 50px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   QUICK PLAY BUTTON
+===================================================== */
+
+.quick-play {
+  position: absolute;
+
+  right: 10px;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: #1ed760;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transform: translateY(5px);
+
+  transition: 0.2s;
+}
+
+.quick-card:hover .quick-play {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quick-play:hover {
+  transform: scale(1.05);
+}
+
+
+/* =====================================================
+   MUSIC SECTION
+===================================================== */
+
+.music-section {
+  margin-top: 38px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.section-title h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+
+/* =====================================================
+   SHOW ALL
+===================================================== */
+
+.show-all-btn {
+  background: none;
+
+  border: none;
+
+  color: #b3b3b3;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.show-all-btn:hover {
+  color: white;
+}
+
+
+/* =====================================================
+   MUSIC GRID
+===================================================== */
+
+.music-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =====================================================
+   MUSIC CARD
+===================================================== */
+
+.music-card {
+  background: #181818;
+
+  padding: 16px;
+
+  border-radius: 7px;
+
+  transition: 0.2s;
+
+  cursor: pointer;
+
+  min-width: 0;
+}
+
+.music-card:hover {
+  background: #282828;
+}
+
+.music-card:hover .album-image {
+  transform: scale(1.02);
+}
+
+
+/* =====================================================
+   ALBUM IMAGE
+===================================================== */
+
+.album-image {
+  width: 100%;
+
+  aspect-ratio: 1;
+
+  border-radius: 5px;
+
+  object-fit: cover;
+
+  display: block;
+
+  margin-bottom: 15px;
+
+  transition: 0.2s;
+}
+
+
+/* =====================================================
+   SONG TITLE
+===================================================== */
+
+.music-card h3 {
+  font-size: 15px;
+
+  margin: 0 0 7px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   ARTIST
+===================================================== */
+
+.music-card p {
+  color: #a7a7a7;
+
+  font-size: 13px;
+
+  margin: 0;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+  .music-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .music-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .quick-grid,
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home {
+    padding: 10px 18px 120px;
+  }
+
+  .home h1 {
+    font-size: 25px;
+  }
+}
+
+/* =====================================================
+
+   HOME LIKE BUTTON
+
+===================================================== */
+
+.home-album-wrapper {
+
+  position: relative;
+
+  width: 100%;
+
+}
+
+
+.home-like-button {
+
+  position: absolute;
+
+  right: 10px;
+
+  bottom: 25px;
+
+  width: 38px;
+
+  height: 38px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.75);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transform: translateY(5px);
+
+  transition:
+    opacity 0.2s,
+    transform 0.2s,
+    background 0.2s,
+    color 0.2s;
+
+  z-index: 5;
+
+}
+
+
+.music-card:hover .home-like-button {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+
+.home-like-button:hover {
+
+  background: #282828;
+
+  transform: scale(1.05);
+
+}
+
+
+.home-like-button.liked {
+
+  color: #1ed760;
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+
+.home-like-button.liked:hover {
+
+  color: #1ed760;
+
+}

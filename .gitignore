@@ -1,0 +1,40 @@
+# React / Vite
+spotify-clone/node_modules/
+spotify-clone/dist/
+spotify-clone/.env
+spotify-clone/.env.*
+!spotify-clone/.env.example
+
+# .NET
+backend/**/bin/
+backend/**/obj/
+backend/**/.vs/
+backend/**/.vscode/
+backend/**/appsettings.Development.json
+backend/**/appsettings.Local.json
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Secrets
+.env
+.env.*
+!.env.example
+secrets.json
+
+# Local backups
+spotify-clone.zip
+spotify-clone (2).zip

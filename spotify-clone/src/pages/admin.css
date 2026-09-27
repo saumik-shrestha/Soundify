@@ -1,0 +1,1174 @@
+
+.admin-page {
+  min-height: calc(100vh - 80px);
+  padding: 32px 40px 120px;
+  color: #ffffff;
+}
+
+/* HEADER */
+
+.admin-header {
+  margin-bottom: 30px;
+}
+
+.admin-header-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-title-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #1db954,
+    #169c46
+  );
+
+  color: white;
+}
+
+.admin-header h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.admin-header p {
+  margin: 6px 0 0;
+
+  color: #a7a7a7;
+  font-size: 14px;
+}
+
+/* CARD */
+
+.admin-card {
+  width: 100%;
+  max-width: 760px;
+
+  padding: 30px;
+
+  background: #181818;
+
+  border: 1px solid #292929;
+  border-radius: 14px;
+
+  box-sizing: border-box;
+}
+
+.admin-card h2 {
+  margin: 0 0 26px;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* FORM */
+
+.admin-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-card label {
+  margin-bottom: 8px;
+
+  color: #d9d9d9;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-card input[type="text"],
+.admin-card input[type="number"] {
+  width: 100%;
+  height: 46px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 20px;
+  padding: 0 14px;
+
+  background: #242424;
+
+  border: 1px solid #383838;
+  border-radius: 7px;
+
+  color: white;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.admin-card input[type="text"]:focus,
+.admin-card input[type="number"]:focus {
+  background: #292929;
+
+  border-color: #1db954;
+}
+
+.admin-card input::placeholder {
+  color: #777777;
+}
+
+/* FILE UPLOAD */
+
+.file-input {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 8px;
+  padding: 8px 12px;
+
+  background: #242424;
+
+  border: 1px dashed #4a4a4a;
+  border-radius: 8px;
+
+  color: #bdbdbd;
+
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.file-input:hover {
+  background: #292929;
+  border-color: #1db954;
+}
+
+.file-input input[type="file"] {
+  width: 100%;
+
+  color: #bdbdbd;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.file-input input[type="file"]::file-selector-button {
+  margin-right: 12px;
+
+  padding: 8px 13px;
+
+  background: #333333;
+
+  border: none;
+  border-radius: 5px;
+
+  color: white;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: background 0.2s;
+}
+
+.file-input input[type="file"]::file-selector-button:hover {
+  background: #444444;
+}
+
+/* SELECTED FILE */
+
+.selected-file {
+  margin: 0 0 20px;
+
+  padding: 9px 12px;
+
+  background: #202020;
+
+  border-radius: 6px;
+
+  color: #b5b5b5;
+
+  font-size: 13px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* MESSAGES */
+
+.admin-error {
+  margin: 4px 0 18px;
+  padding: 12px 14px;
+
+  background: rgba(255, 70, 70, 0.1);
+
+  border: 1px solid rgba(255, 70, 70, 0.3);
+  border-radius: 7px;
+
+  color: #ff6b6b;
+
+  font-size: 14px;
+}
+
+.admin-success {
+  margin: 4px 0 18px;
+  padding: 12px 14px;
+
+  background: rgba(29, 185, 84, 0.1);
+
+  border: 1px solid rgba(29, 185, 84, 0.3);
+  border-radius: 7px;
+
+  color: #1ed760;
+
+  font-size: 14px;
+}
+
+/* UPLOAD BUTTON */
+
+.admin-upload-button {
+  width: 100%;
+  height: 48px;
+
+  margin-top: 4px;
+
+  background: #1db954;
+
+  border: none;
+  border-radius: 24px;
+
+  color: #000000;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.admin-upload-button:hover {
+  background: #1ed760;
+}
+
+.admin-upload-button:active {
+  transform: scale(0.99);
+}
+
+.admin-upload-button:disabled {
+  background: #555555;
+
+  color: #999999;
+
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   MANAGE SONGS
+   ============================================================ */
+
+.admin-song-management {
+  margin-top: 24px;
+}
+
+.admin-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.admin-section-heading h2 {
+  margin: 0 0 6px;
+}
+
+.admin-section-heading p {
+  margin: 0;
+  color: #a7a7a7;
+}
+
+.song-count {
+  white-space: nowrap;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+/* SONG LIST */
+
+.admin-song-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-song-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #181818;
+  transition: background 0.2s ease;
+}
+
+.admin-song-item:hover {
+  background: #242424;
+}
+
+/* SONG IMAGE */
+
+.admin-song-image {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border-radius: 6px;
+  background: #282828;
+  color: #777;
+}
+
+.admin-song-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SONG INFO */
+
+.admin-song-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-song-info h3 {
+  margin: 0 0 5px;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-song-info p {
+  margin: 0 0 4px;
+
+  color: #b3b3b3;
+  font-size: 14px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-song-info span {
+  color: #777;
+  font-size: 12px;
+}
+
+/* ACTION BUTTONS */
+
+.admin-song-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.admin-edit-button,
+.admin-delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: none;
+  border-radius: 5px;
+
+  padding: 8px 12px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+.admin-edit-button {
+  background: #282828;
+  color: #fff;
+}
+
+.admin-edit-button:hover {
+  background: #383838;
+}
+
+.admin-delete-button {
+  background: #3a1717;
+  color: #ffb3b3;
+}
+
+.admin-delete-button:hover {
+  background: #552020;
+}
+
+.admin-edit-button:active,
+.admin-delete-button:active {
+  transform: scale(0.97);
+}
+
+.admin-edit-button:disabled,
+.admin-delete-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* LOADING / EMPTY */
+
+.admin-loading,
+.admin-empty {
+  padding: 30px 10px;
+  margin: 0;
+
+  text-align: center;
+  color: #888;
+}
+
+/* ============================================================
+   EDIT MODAL
+   ============================================================ */
+
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.admin-modal {
+  width: min(520px, calc(100vw - 32px));
+
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+
+  padding: 24px;
+
+  border-radius: 10px;
+
+  background: #181818;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+  box-sizing: border-box;
+}
+
+.admin-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+.admin-modal-header h2 {
+  margin: 0 0 6px;
+}
+
+.admin-modal-header p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.admin-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #282828;
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.admin-modal-close:hover {
+  background: #383838;
+}
+
+/* ============================================================
+   EDIT FORM
+   ============================================================ */
+
+.admin-edit-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-edit-form label {
+  margin-bottom: 7px;
+  color: #ddd;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/*
+   IMPORTANT:
+   Only normal text-like inputs get the text-input styling.
+   Checkboxes are excluded.
+*/
+
+.admin-edit-form input:not([type="checkbox"]) {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-bottom: 18px;
+
+  padding: 11px 12px;
+
+  border: 1px solid #3a3a3a;
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #282828;
+  color: #fff;
+
+  font-size: 14px;
+}
+
+.admin-edit-form input:not([type="checkbox"]):focus {
+  border-color: #777;
+}
+
+/* ============================================================
+   EDIT ACTIONS
+   ============================================================ */
+
+.admin-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 8px;
+}
+
+.admin-cancel-button,
+.admin-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-cancel-button {
+  background: #282828;
+  color: #fff;
+}
+
+.admin-cancel-button:hover {
+  background: #383838;
+}
+
+.admin-save-button {
+  background: #fff;
+  color: #000;
+}
+
+.admin-save-button:hover {
+  background: #ddd;
+}
+
+.admin-cancel-button:disabled,
+.admin-save-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   MANAGE USERS
+   ============================================================ */
+
+.admin-user-management {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 28px;
+}
+
+/* USER SEARCH */
+
+.admin-user-search {
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  box-sizing: border-box;
+
+  margin: 22px 0;
+  padding: 0 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.admin-user-search svg {
+  flex-shrink: 0;
+}
+
+.admin-user-search input {
+  width: 100%;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+.admin-user-search input::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+/* USER LIST */
+
+.admin-user-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* USER ITEM */
+
+.admin-user-item {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-user-item:hover {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 255, 255, 0.11);
+}
+
+/* USER AVATAR */
+
+.admin-user-avatar {
+  width: 46px;
+  height: 46px;
+
+  min-width: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* USER INFORMATION */
+
+.admin-user-info {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.admin-user-name-row {
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.admin-user-info h3 {
+  margin: 0;
+
+  min-width: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.admin-user-info p {
+  margin: 4px 0 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 13px;
+}
+
+/* ADMIN BADGE */
+
+.admin-user-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-user-badge svg {
+  flex-shrink: 0;
+}
+
+/* CURRENT USER BADGE */
+
+.admin-user-current {
+  display: inline-flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  padding: 4px 8px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* USER ACTIONS */
+
+.admin-user-actions {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
+}
+
+/* USER ACTION BUTTONS */
+
+.admin-user-actions button {
+  min-height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 0 11px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.15s ease;
+}
+
+.admin-user-actions button svg {
+  flex-shrink: 0;
+}
+
+.admin-user-actions button:active {
+  transform: scale(0.97);
+}
+
+.admin-user-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* USER EDIT BUTTON */
+
+.admin-user-actions .admin-edit-button {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.admin-user-actions .admin-edit-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* USER DELETE BUTTON */
+
+.admin-user-actions .admin-delete-button {
+  border: 1px solid rgba(255, 90, 90, 0.2);
+
+  background: rgba(255, 80, 80, 0.07);
+
+  color: #ff8a8a;
+}
+
+.admin-user-actions .admin-delete-button:hover:not(:disabled) {
+  background: rgba(255, 80, 80, 0.13);
+  border-color: rgba(255, 90, 90, 0.32);
+}
+
+/* SECTION HEADING */
+
+.admin-user-management .admin-section-heading {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.admin-user-management .admin-section-heading > div {
+  min-width: 0;
+}
+
+.admin-user-management .admin-section-heading h2 {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0;
+}
+
+.admin-user-management .admin-section-heading h2 svg {
+  flex-shrink: 0;
+}
+
+/* USER COUNT */
+
+.admin-user-management .song-count {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   USER FORM CHECKBOX
+   ============================================================ */
+
+.admin-checkbox-label {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 8px;
+
+  cursor: pointer;
+}
+
+.admin-checkbox-label input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  accent-color: #1db954;
+}
+
+.admin-checkbox-label span {
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+}
+
+/* ============================================================
+   ADMIN FORM NOTE
+   ============================================================ */
+
+.admin-form-note {
+  margin: 8px 0 0;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   RESPONSIVE — TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .admin-user-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .admin-user-info {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .admin-user-actions {
+    width: 100%;
+    margin-left: 62px;
+
+    justify-content: flex-start;
+  }
+
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .admin-page {
+    padding: 24px 18px 120px;
+  }
+
+  .admin-card {
+    padding: 22px;
+  }
+
+  .admin-header h1 {
+    font-size: 26px;
+  }
+
+  .admin-song-item {
+    align-items: flex-start;
+  }
+
+  .admin-song-actions {
+    flex-direction: column;
+  }
+
+  .admin-edit-button,
+  .admin-delete-button {
+    width: 90px;
+  }
+
+  .admin-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .admin-user-management .admin-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .admin-user-search {
+    margin: 18px 0;
+  }
+
+  .admin-user-item {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .admin-user-avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .admin-user-info {
+    min-width: 0;
+  }
+
+  .admin-user-info h3 {
+    font-size: 14px;
+  }
+
+  .admin-user-info p {
+    font-size: 12px;
+  }
+
+  .admin-user-actions {
+    width: 100%;
+    margin-left: 54px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7px;
+  }
+
+  .admin-user-actions button {
+    width: 100%;
+    min-height: 38px;
+  }
+
+  .admin-user-actions .admin-delete-button {
+    grid-column: 1 / -1;
+  }
+
+  .admin-modal {
+    padding: 18px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .admin-song-item {
+    flex-wrap: wrap;
+  }
+
+  .admin-song-info {
+    width: calc(100% - 80px);
+  }
+
+  .admin-song-actions {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .admin-edit-button,
+  .admin-delete-button {
+    flex: 1;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .admin-user-item {
+    padding: 12px;
+  }
+
+  .admin-user-actions {
+    margin-left: 0;
+  }
+
+  .admin-user-name-row {
+    gap: 5px;
+  }
+
+}

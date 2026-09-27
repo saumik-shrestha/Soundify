@@ -1,0 +1,385 @@
+/* =====================================================
+
+   SEARCH
+
+===================================================== */
+
+.search-page {
+
+  padding: 10px 30px 150px;
+
+}
+
+.search-page h1 {
+
+  font-size: 30px;
+
+  margin: 10px 0 25px;
+
+}
+
+
+/* =====================================================
+
+   SEARCH INPUT
+
+===================================================== */
+
+.search-header {
+
+  margin-bottom: 30px;
+
+}
+
+.search-input-wrapper {
+
+  width: 100%;
+
+  max-width: 600px;
+
+  height: 48px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+.search-input-icon {
+
+  position: absolute;
+
+  left: 15px;
+
+  color: #121212;
+
+  pointer-events: none;
+
+}
+
+.search-input-wrapper input {
+
+  width: 100%;
+
+  height: 100%;
+
+  box-sizing: border-box;
+
+  padding: 0 18px 0 48px;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 25px;
+
+  background: white;
+
+  color: #121212;
+
+  font-size: 15px;
+
+}
+
+.search-input-wrapper input::placeholder {
+
+  color: #666;
+
+}
+
+
+/* =====================================================
+
+   EMPTY STATE
+
+===================================================== */
+
+.search-empty {
+
+  min-height: 350px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  color: #a7a7a7;
+
+}
+
+.search-empty svg {
+
+  margin-bottom: 20px;
+
+}
+
+.search-empty h2 {
+
+  color: white;
+
+  font-size: 22px;
+
+  margin: 0 0 10px;
+
+}
+
+.search-empty p {
+
+  margin: 0;
+
+  font-size: 14px;
+
+}
+
+
+/* =====================================================
+
+   RESULTS
+
+===================================================== */
+
+.search-results {
+
+  margin-top: 10px;
+
+}
+
+.search-results h2 {
+
+  font-size: 22px;
+
+  margin: 0 0 18px;
+
+}
+
+
+/* =====================================================
+
+   SEARCH GRID
+
+===================================================== */
+
+.search-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+
+}
+
+
+/* =====================================================
+
+   SEARCH CARD
+
+===================================================== */
+
+.search-card {
+
+  background: #181818;
+
+  padding: 16px;
+
+  border-radius: 7px;
+
+  transition: 0.2s;
+
+  cursor: pointer;
+
+  min-width: 0;
+
+}
+
+.search-card:hover {
+
+  background: #282828;
+
+}
+
+
+/* =====================================================
+
+   IMAGE
+
+===================================================== */
+
+.search-image-wrapper {
+
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 1;
+
+  margin-bottom: 15px;
+
+}
+
+.search-image {
+
+  width: 100%;
+
+  height: 100%;
+
+  border-radius: 5px;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+
+/* =====================================================
+
+   PLAY BUTTON
+
+===================================================== */
+
+.search-play {
+
+  position: absolute;
+
+  right: 10px;
+
+  bottom: 10px;
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: #1ed760;
+
+  color: black;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  transform: translateY(5px);
+
+  transition: 0.2s;
+
+}
+
+.search-card:hover .search-play {
+
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+
+.search-play:hover {
+
+  transform: scale(1.05);
+
+}
+
+
+/* =====================================================
+
+   SONG TEXT
+
+===================================================== */
+
+.search-card h3 {
+
+  font-size: 15px;
+
+  margin: 0 0 7px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+}
+
+.search-card p {
+
+  color: #a7a7a7;
+
+  font-size: 13px;
+
+  margin: 0;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+}
+
+
+/* =====================================================
+
+   RESPONSIVE
+
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .search-grid {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .search-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .search-page {
+
+    padding:
+      10px 18px 120px;
+
+  }
+
+  .search-page h1 {
+
+    font-size: 25px;
+
+  }
+
+  .search-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}

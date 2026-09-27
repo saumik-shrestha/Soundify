@@ -1,0 +1,218 @@
+
+/* =====================================================
+
+   LOGIN / REGISTER PAGE
+
+===================================================== */
+
+.login-page {
+
+  width: 100vw;
+
+  height: 100vh;
+
+  background: linear-gradient(
+
+    135deg,
+
+    #000000,
+
+    #121212,
+
+    #1ed760
+
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+.login-box {
+
+  width: 380px;
+
+  background: #181818;
+
+  padding: 40px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+  color: white;
+
+}
+
+.login-logo {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+
+  color: #1ed760;
+
+}
+
+.login-logo h1 {
+
+  margin: 0;
+
+  color: white;
+
+  font-size: 28px;
+
+}
+
+.login-box h2 {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+}
+
+.login-box form {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+.login-box label {
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  margin-bottom: 8px;
+
+  margin-top: 15px;
+
+}
+
+.login-box input {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px;
+
+  background: #282828;
+
+  border: 1px solid #535353;
+
+  border-radius: 5px;
+
+  color: white;
+
+  outline: none;
+
+  font-size: 14px;
+
+}
+
+.login-box input:focus {
+
+  border-color: white;
+
+}
+
+.login-box input::placeholder {
+
+  color: #888;
+
+}
+
+.login-button {
+
+  margin-top: 25px;
+
+  padding: 13px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #1ed760;
+
+  color: black;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+.login-button:hover {
+
+  background: #1fdf64;
+
+  transform: scale(1.02);
+
+}
+
+.login-register {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 25px;
+
+  color: #a7a7a7;
+
+  font-size: 14px;
+
+}
+
+.login-register button {
+
+  border: none;
+
+  background: none;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+.login-register button:hover {
+
+  color: #1ed760;
+
+  text-decoration: underline;
+
+}
+
+@media (max-width: 500px) {
+
+  .login-box {
+
+    width: calc(100% - 40px);
+
+    padding: 30px 20px;
+
+  }
+
+}
